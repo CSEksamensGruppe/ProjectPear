@@ -4,5 +4,11 @@ Project Pear is a simple 2d platformer, made by 5 Computer Science students in t
 
 ## Software Used
 * [Unity3D](http://unity3d.com)
-..* [Download Unity here](https://store.unity.com/download?ref=personal)
+[Download Unity here](https://store.unity.com/download?ref=personal)
+* [Microsoft Visual Studio 2017 Enterprise](https://www.visualstudio.com/)
+* [Piskel - Online Sprite Editor](https://www.piskelapp.com/)
+
 ## Features
+* Simple Movement
+* Jumping
+* Online Highscoreboard
