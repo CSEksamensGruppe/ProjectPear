@@ -7,6 +7,7 @@ Project Pear is a simple 2d platformer, made by 5 Computer Science students in t
 * [Microsoft Visual Studio 2017 Enterprise](https://www.visualstudio.com/)
 * [Piskel - Online Sprite Editor](https://www.piskelapp.com/)
 * [DrawIO](http://Draw.io)
+* [ScrumDesk](http://scrumdesk.com)
 
 ## Features
 * Simple Movement
