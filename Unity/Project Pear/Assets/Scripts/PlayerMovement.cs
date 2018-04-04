@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Speed the player will move in the X axis.")]
     private float movementSpeed;
 
+    [SerializeField]
+    [Tooltip("Height the player will jump in the Y axis.")]
+    private float jumpHeight;
+
     // Rigidbody, so that our player has physics.
     private Rigidbody2D rb2d;
 
@@ -21,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     // Are we facing right?
     private bool facingRight = true;
 
+    // Are we on solid ground?
+    private bool grounded = true;
+
     // Using this for initialization
     void Start()
     {
@@ -31,7 +38,16 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if (grounded && Input.GetButtonDown("Jump"))
+        {
+            //Jump Script
+            rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            grounded = false;
+        }
+    }
+
     void FixedUpdate()
     {
         // Defines the move-direction.
@@ -58,6 +74,14 @@ public class PlayerMovement : MonoBehaviour
         {
             facingRight = false;
             spriteRenderer.flipX = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.CompareTag("Environment"))
+        {
+            grounded = true;
         }
     }
 }

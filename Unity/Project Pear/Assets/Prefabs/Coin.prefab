@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 4075926921459582}
   - component: {fileID: 212023896779713246}
   - component: {fileID: 58411387452023166}
+  - component: {fileID: 114074903461455818}
+  - component: {fileID: 114307566333479490}
+  - component: {fileID: 114928673434579548}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -35,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1596688851247770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 2, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,12 +53,45 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.42, y: -0.42}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.42
+--- !u!114 &114074903461455818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596688851247770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cdd2f926178b9439ad82d7c43b3382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114307566333479490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596688851247770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cdd2f926178b9439ad82d7c43b3382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114928673434579548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596688851247770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cdd2f926178b9439ad82d7c43b3382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212023896779713246
 SpriteRenderer:
   m_ObjectHideFlags: 1
