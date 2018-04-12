@@ -379,6 +379,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114108082365798954, guid: 56663d28c91b3cd43924a65b0de74f30,
+        type: 2}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 50095387490204816, guid: 56663d28c91b3cd43924a65b0de74f30,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50095387490204816, guid: 56663d28c91b3cd43924a65b0de74f30,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56663d28c91b3cd43924a65b0de74f30, type: 2}
   m_IsPrefabParent: 0
@@ -483,7 +498,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300044, guid: a9ae63ea8adc3224fbd4feba3ab9bc8a, type: 3}
+  m_Sprite: {fileID: 21300038, guid: a9ae63ea8adc3224fbd4feba3ab9bc8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -593,9 +608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'coins
-
-'
+  m_Text: carrots
 --- !u!222 &744850009
 CanvasRenderer:
   m_ObjectHideFlags: 0

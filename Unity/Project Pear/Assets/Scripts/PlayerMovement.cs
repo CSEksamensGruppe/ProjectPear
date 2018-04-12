@@ -45,7 +45,9 @@ public class PlayerMovement : MonoBehaviour
             //Jump Script
             rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
             grounded = false;
+            anim.SetBool("Grounded", false);
         }
+
     }
 
     void FixedUpdate()
@@ -82,6 +84,16 @@ public class PlayerMovement : MonoBehaviour
         if(collision.collider.CompareTag("Environment"))
         {
             grounded = true;
+            anim.SetBool("Grounded", true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision2D)
+    {
+        if (collision2D.collider.CompareTag("Environment"))
+        {
+            grounded = false;
+            anim.SetBool("Grounded", false);
         }
     }
 }
