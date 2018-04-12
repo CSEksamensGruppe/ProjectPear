@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4065106153130778}
   - component: {fileID: 212885172324456248}
+  - component: {fileID: 114299140370052950}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -34,12 +35,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1986441498922000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.979, y: -0.08, z: 0}
-  m_LocalScale: {x: 6.2443724, y: 5.5199146, z: 4.619076}
+  m_LocalPosition: {x: 0.9, y: 0.1, z: 0}
+  m_LocalScale: {x: 3.1489818, y: 2.7836442, z: 2.329359}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114299140370052950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986441498922000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7082b48bd2b42e842990162b129d1353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212885172324456248
 SpriteRenderer:
   m_ObjectHideFlags: 1
