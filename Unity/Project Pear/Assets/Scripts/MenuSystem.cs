@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MenuSystem : MonoBehaviour {
 
-    void StartGameOnClick()
+    public void StartGameOnClick()
     {
-        SceneManager.LoadScene("Level_01");
+        SceneManager.LoadScene("Level_01", LoadSceneMode.Single);
     }
 
+    public void OptionsSceneOnClick()
+    {
+        SceneManager.LoadScene("OptionsScene", LoadSceneMode.Single);
+    }
 
+    public void QuitGameOnClick()
+    {
+        Application.Quit();
+    }
+    
 }
