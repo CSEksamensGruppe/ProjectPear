@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuSystem : MonoBehaviour {
+public class MenuSystem : MonoBehaviour
+{
 
     public void StartGameOnClick()
     {
@@ -19,5 +20,10 @@ public class MenuSystem : MonoBehaviour {
     {
         Application.Quit();
     }
-    
+
+    public void StartMenuOnClick()
+    {
+        SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
+    }
+
 }
