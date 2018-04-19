@@ -52,9 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336f4b57e9ff85a41b0be24692261041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 114431291631996120, guid: 10205a91bf550924ea5a378022efbf6b, type: 2}
   FinalScore: {fileID: 114536239255744394, guid: ca1b79fde8b8cd740b8c9a78abe2aa96,
     type: 2}
-  GameUI: {fileID: 0}
+  GameUI: {fileID: 1203044631359718, guid: 10205a91bf550924ea5a378022efbf6b, type: 2}
 --- !u!114 &114715892468320576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9d2872f0dff2a428e261ba7595245a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 1051424631373522, guid: 56663d28c91b3cd43924a65b0de74f30, type: 2}
+  WinScreen: {fileID: 1908529819825624, guid: f2f48fae4a1f53d4caf7458c1e38a58b, type: 2}
   DeadScreen: {fileID: 1106529504128846, guid: ca1b79fde8b8cd740b8c9a78abe2aa96, type: 2}
   Score: {fileID: 114417320945599388}

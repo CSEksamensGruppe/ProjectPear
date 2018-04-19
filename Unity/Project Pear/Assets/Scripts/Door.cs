@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            GameMan.LoadNextLevel();
+            GameMan.WinGame();
         }
     }
 }
