@@ -1,31 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
-    private Text coinText;
-    private int coin = 0;
+    public TextMeshProUGUI FinalScore;
+    private Text _coinText;
+    private int _coin = 0;
 
     public int Coin
     {
-        get { return coin; }
-        set { coin = value; }
+        get { return _coin; }
+        set { _coin = value; }
     }
 
     // Use this for initialization
     void Start()
     {
-        coinText = FindObjectOfType<Text>();
+        _coinText = FindObjectOfType<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (coin.ToString() != coinText.text)
+        if (_coin.ToString() != _coinText.text)
         {
-            coinText.text = coin.ToString();
+            _coinText.text = _coin.ToString();
+        }
+
+        if (_coin.ToString() != FinalScore.text)
+        {
+            FinalScore.text = _coin.ToString();
         }
     }
 }

@@ -26,4 +26,9 @@ public class MenuSystem : MonoBehaviour
         SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
     }
 
+    public void ReplayLevel(int level)
+    {
+        SceneManager.LoadScene(level);
+    }
+
 }

@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (grounded && Input.GetButtonDown("Jump"))
+        if (grounded && Input.GetButtonDown("Jump") || grounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
             //Jump Script
             rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
