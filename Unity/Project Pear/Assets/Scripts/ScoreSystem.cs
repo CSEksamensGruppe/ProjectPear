@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
     public TextMeshProUGUI FinalScore;
+    public GameObject GameUI;
     private Text _coinText;
     private int _coin = 0;
 
@@ -25,14 +26,25 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_coin.ToString() != _coinText.text)
+        if (_coinText)
         {
-            _coinText.text = _coin.ToString();
+            if (_coin.ToString() != _coinText.text)
+            {
+                _coinText.text = _coin.ToString();
+            }
         }
+
 
         if (_coin.ToString() != FinalScore.text)
         {
             FinalScore.text = _coin.ToString();
         }
     }
+
+
+    public void DestroyGameUI()
+    {
+        Destroy(GameUI);
+    }
+
 }

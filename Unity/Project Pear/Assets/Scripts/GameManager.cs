@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject Player;
     public GameObject DeadScreen;
+    public ScoreSystem Score;
+    public GameObject GameUI;
 
     private bool deadScreenSpawned = false;
 
@@ -16,6 +18,8 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(DeadScreen, new Vector3(0, 0, 0), Quaternion.identity);
             deadScreenSpawned = true;
+            Score.Coin = 0;
+            Score.DestroyGameUI();
         }
     }
 
