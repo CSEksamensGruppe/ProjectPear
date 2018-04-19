@@ -1,15 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
+    public TextMeshProUGUI Timer;
     public TextMeshProUGUI FinalScore;
     public GameObject GameUI;
+
+    private Stopwatch _timer;
     private Text _coinText;
-    private int _coin = 0;
+    private int _coin;
+    private float _minutes;
+    private float _seconds;
+    private float _milliseconds;
 
     public int Coin
     {
@@ -38,7 +46,29 @@ public class ScoreSystem : MonoBehaviour
         if (_coin.ToString() != FinalScore.text)
         {
             FinalScore.text = _coin.ToString();
+            
         }
+
+        if (Timer)
+        {
+                _minutes = (int)(Time.timeSinceLevelLoad / 60f);
+                _seconds = (int)(Time.timeSinceLevelLoad % 60f);
+                _milliseconds = (int)(Time.timeSinceLevelLoad % 60f * 1000);
+
+            if (_milliseconds > 999)
+            {
+                _milliseconds = 0;
+            }
+            else if (Math.Abs(_milliseconds) == 0)
+            {
+                _milliseconds = (int)(Time.timeSinceLevelLoad % 60f * 1000);
+            }
+                Timer.text = _minutes.ToString("00") + ":" + _seconds.ToString("00") + ":" + _milliseconds.ToString("00");
+        }
+
+        
+
+        
     }
 
 

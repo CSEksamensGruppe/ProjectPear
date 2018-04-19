@@ -18,7 +18,10 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(DeadScreen, new Vector3(0, 0, 0), Quaternion.identity);
             deadScreenSpawned = true;
-            Score.Coin = 0;
+            if (!Player)
+            {
+                Score.Coin = 0;
+            }
             Score.DestroyGameUI();
         }
     }
