@@ -29,8 +29,6 @@ public class GameManager : MonoBehaviour
     {
         Score.StopTimer();
         Time.timeScale = 0f;
-        Debug.Log("Game is done");
-        //TODO: Spawn win-screen.
         Instantiate(WinScreen, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
