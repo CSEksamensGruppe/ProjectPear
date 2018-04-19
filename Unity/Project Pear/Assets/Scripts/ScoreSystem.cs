@@ -46,29 +46,28 @@ public class ScoreSystem : MonoBehaviour
         if (_coin.ToString() != FinalScore.text)
         {
             FinalScore.text = _coin.ToString();
-            
+
         }
 
         if (Timer)
         {
-                _minutes = (int)(Time.timeSinceLevelLoad / 60f);
-                _seconds = (int)(Time.timeSinceLevelLoad % 60f);
-                _milliseconds = (int)(Time.timeSinceLevelLoad % 60f * 1000);
+            _minutes = (int)(Time.timeSinceLevelLoad / 60f);
+            _seconds = (int)(Time.timeSinceLevelLoad % 60f);
+            _milliseconds = (int)(Time.timeSinceLevelLoad * 1000f) % 1000;
 
-            if (_milliseconds > 999)
+            if (_milliseconds > 1000f)
             {
-                _milliseconds = 0;
+                _milliseconds = 0f;
+                _milliseconds = (int)(Time.timeSinceLevelLoad * 1000f) % 1000;
             }
-            else if (Math.Abs(_milliseconds) == 0)
-            {
-                _milliseconds = (int)(Time.timeSinceLevelLoad % 60f * 1000);
-            }
-                Timer.text = _minutes.ToString("00") + ":" + _seconds.ToString("00") + ":" + _milliseconds.ToString("00");
+
+
+            Timer.text = _minutes.ToString("00") + ":" + _seconds.ToString("00") + ":" + _milliseconds.ToString("000");
         }
 
-        
 
-        
+
+
     }
 
 
