@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject DeadScreen;
     public ScoreSystem Score;
-    public GameObject GameUI;
 
     private bool deadScreenSpawned = false;
 
